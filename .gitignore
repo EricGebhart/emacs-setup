@@ -1,1 +1,10 @@
 *.elc
+/elisp/.session
+/elisp/elpa/
+/elisp/emms/
+/elisp/projectile-bookmarks.eld
+/elisp/projectile.cache
+/junk/
+/elisp/transient/
+/elisp/smex-items
+/.session

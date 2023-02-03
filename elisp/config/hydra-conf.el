@@ -41,3 +41,28 @@ _~_: modified
   ("q" quit-window "quit" :color blue))
 
 (define-key Buffer-menu-mode-map "." 'hydra-buffer-menu/body)
+
+(require 'hydra-posframe)
+(hydra-posframe-mode 1)
+
+(require 'major-mode-hydra)
+
+(global-set-key (kbd "M-SPC") #'major-mode-hydra)
+
+(major-mode-hydra-define emacs-lisp-mode nil
+  ("Eval"
+   (("b" eval-buffer "buffer")
+    ("e" eval-defun "defun")
+    ("r" eval-region "region")
+    ("c" nil "cancel"))
+   "REPL"
+   (("I" ielm "ielm"))
+   "Test"
+   (("t" ert "prompt")
+    ("T" (ert t) "all")
+    ("F" (ert :failed) "failed"))
+   "Doc"
+   (("d" describe-foo-at-point "thing-at-pt")
+    ("f" describe-function "function")
+    ("v" describe-variable "variable")
+    ("i" info-lookup-symbol "info lookup"))))

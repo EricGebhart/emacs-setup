@@ -7,6 +7,7 @@
 ;;           and enhancements to your personal environment.
 ;;
 ;; Author: Eric Gebhart  e.a.gebhart@gmail.com
+;;         Erica Lina
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Code:

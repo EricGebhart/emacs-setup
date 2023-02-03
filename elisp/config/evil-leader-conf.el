@@ -10,7 +10,7 @@
 (require 'cider-doc)
 (require 'clj-refactor)
 (require 'git-frame)
-(require 'helm)
+;;(require 'helm)
 (require 'cider-hydra)
 
 ;; (require 'google-translate)
@@ -256,25 +256,25 @@
   "t" 'hydra-window/body
   "T" 'find-tag-without-ns  ;; ctags
   "v" 'cider-find-var
-  "a" 'helm-ag
+  "a" 'ag
   "s" 'evil-ace-jump-word-mode  ;;  ace jump search
 
 
   "h" 'hydra-sub-map
   "G" 'golden-ratio-mode
   "g" 'magit-other-frame  ;; magit is git.
-  "i" 'helm-semantic-or-imenu
+  "i" 'imenu
   "j" 'dired-jump
 
-  "f" 'helm-find-files
+  "f" 'find-file
   ;;"O" 'ido-find-file-other-window
 
   "o" 'hydra-org/body
-  "P" 'eaf-py-proxy-yank_text
-  "p" 'helm-projectile
+  ;;"P" 'eaf-py-proxy-yank_text
+  "p" 'projectile-buffers-with-file
   "B" 'ibuffer
-  "b" 'helm-buffers-list
-  "m" 'helm-man-woman
+  "b" 'consult-buffer  ;switch-to-buffer
+  "m" 'woman
 
   "x" 'smex  ;; M-x.
   "K" 'delete-frame
@@ -288,7 +288,7 @@
   "n" 'cb-next-buffer-contextual
   "N" 'cb-next-all-buffer
 
-  "e" 'next-error
+  "e" 'er/expand-region
   "E" 'next-error
 
   "V" 'undo-tree-visualize

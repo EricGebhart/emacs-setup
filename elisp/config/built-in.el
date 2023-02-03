@@ -25,10 +25,11 @@
 ;;(cua-mode 1)
 ;;(setq cua-enable-cua-keys nil)
 
-;;enable winner mode for C-c-(<left>|<right>) to navigate the history
-;;of buffer changes i.e. undo a split screen
-(when (fboundp 'winner-mode)
-  (winner-mode 1))
+;; never use.
+;; ;;enable winner mode for C-c-(<left>|<right>) to navigate the history
+;; ;;of buffer changes i.e. undo a split screen
+;; (when (fboundp 'winner-mode)
+;;   (winner-mode 1))
 
 (setq initial-major-mode 'lisp-interaction-mode
       redisplay-dont-pause t

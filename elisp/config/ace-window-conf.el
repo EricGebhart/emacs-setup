@@ -31,5 +31,30 @@
                                                    (string-to-list "QJKMWV")
                                                    (number-sequence ?, ?@))))
 
+;; This magnificent package takes care of this issue. It’s unnoticeable if
+;; you have <3 panes open, but with 3 or more, upon pressing C-x o you will
+;; notice how your buffers turn a solid color and each buffer is asigned a
+;; letter (the list below shows the letters, you can modify them to suit your
+;; liking), upon pressing a letter asigned to a window, your will be taken
+;; to said window, easy to remember, quick to use and most importantly, it
+;; annihilates a big issue I had with emacs.
+
+;; An alternative is ace-window,
+;; however by default it also changes the behaviour of C-x o even if only
+;; 2 windows are open, this is bad, it also works less well with exwm for
+;; some reason.
+
+;; (use-package switch-window
+;;              :ensure t
+;;              :config
+;;              (setq switch-window-input-style 'minibuffer)
+;;              (setq switch-window-increase 4)
+;;              (setq switch-window-threshold 2)
+;;              (setq switch-window-shortcut-style 'qwerty)
+;;              (setq switch-window-qwerty-shortcuts
+;;                    '("o" "e" "u" "h" "t" "n" "i" "d" "a" "s"))
+;;              :bind
+;;              ([remap other-window] . switch-window))
+
 (provide 'ace-window-conf)
 ;;; ace-window-conf.el ends here
